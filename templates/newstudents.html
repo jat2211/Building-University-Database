@@ -1,0 +1,84 @@
+<html>
+  <style>
+    body{
+      font-size: 15pt;
+      font-family: times new roman;
+    }
+
+    .topnav {
+      background-color: #333;
+      overflow: hidden;
+    }
+
+    .topnav a {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .topnav a.active {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+  </style>
+
+  <div class="topnav">
+      <a class="active" href="homepage">Home</a>
+      <a href="displaymajors">Majors</a>
+      <a href="displaystudents">Students</a>
+      <a href="displayprofessors">Professors</a>
+      <a href="displayclasses">Classes</a>
+      <a href="majorcores">Major Cores</a>
+      <a href="majortracks">Major Tracks</a>
+      <a href="corereqs">Core Requirements</a>
+      <a href="trackreqs">Track Requirements</a>
+      <a href="majoringin">Student Majors</a>
+      <a href="displaypassed">Student Passed Classes</a>
+      <a href="coreprogstep1">Student Core Progress</a>
+      <a href="trackprogstep1">Student Track Progress</a>
+      <a href="changemajors">Change Student Majors</a>
+      <a href="managedata">Add Data</a>
+      <a href="passedprof1">Course Completion</a>
+      <a href="newstudents">New Students</a>
+
+  </div>
+
+
+<body>
+  <h1>Select type of student</h1>
+
+
+  <div>
+    <form action="/newstudents" method="POST">
+
+
+    <select name="status" id="status">
+      <option value="new">New Students (0 Passed Classes)</option>
+      <option value="old">Not New Students (>0 Passed Classes)</option>
+
+    </select>
+    <br><br>
+    <input type="submit" value="Submit">
+  </form>
+
+  </div>
+
+  <div>
+
+    {% for myn2 in data %}
+    <div>{{myn2}}</div>
+    {% endfor %}
+
+  </div>
+
+</body>
+</html>
