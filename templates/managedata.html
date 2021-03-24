@@ -1,0 +1,95 @@
+<html>
+  <style>
+    body{
+      font-size: 15pt;
+      font-family: times new roman;
+    }
+
+    .topnav {
+      background-color: #333;
+      overflow: hidden;
+    }
+
+    .topnav a {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .topnav a.active {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+  </style>
+
+  <div class="topnav">
+      <a class="active" href="homepage">Home</a>
+      <a href="displaymajors">Majors</a>
+      <a href="displaystudents">Students</a>
+      <a href="displayprofessors">Professors</a>
+      <a href="displayclasses">Classes</a>
+      <a href="majorcores">Major Cores</a>
+      <a href="majortracks">Major Tracks</a>
+      <a href="corereqs">Core Requirements</a>
+      <a href="trackreqs">Track Requirements</a>
+      <a href="majoringin">Student Majors</a>
+      <a href="displaypassed">Student Passed Classes</a>
+      <a href="coreprogstep1">Student Core Progress</a>
+      <a href="trackprogstep1">Student Track Progress</a>
+      <a href="changemajors">Change Student Majors</a>
+      <a href="managedata">Add Data</a>
+      <a href="passedprof1">Course Completion</a>
+      <a href="newstudents">New Students</a>
+
+  </div>
+
+  <body>
+    <h1>Manage the Data in the Student Database</h1>
+    <h2>Insert a table name in the corresponding box</h2>
+
+    <div>
+      <form action="/managedata" method="POST">
+      <label for="table">Table Name:</label>
+      <input type="text" id="table" name="table"><br><br>
+
+      <label for="add">Add Data:</label>
+      <input type="text" id="add" name="add"><br><br>
+
+      <input type="submit" value="Submit">
+      </form>
+    </div>
+
+
+    <div class="container">
+        <p>The formatting for adding tables is as follows (exclude the parentheses):</p>
+        <p>Table Name: [table], Data: [dtype1,dtype2,...,dtypen]</p>
+        <p> </p>
+        <p>For example, for adding some arbitrary major:</p>
+        <p>Table Name: Major</p>
+        <p>Add Data: 00012345,'New Major Name'</p>
+        <p> </p>
+        <p>[Major]: [major_id,major_name] [int,'str']</p>
+        <p>[Student]: [stud_id,stud_name,tot_creds] [int,'str',int]</p>
+        <p>[Professor]: [prof_id,prof_name] [int,'str']</p>
+        <p>[Class]: [course_id,course_name,creds,prof_id,prof_name] [int,'str',int,int,'str']</p>
+        <p>[Major_Core]: [core_id,core_name,major_id] [int,'str',int]</p>
+        <p>[Major_Track]: [track_id,track_name,track_cred,major_id] [int,'str',int,int]</p>
+        <p>[Core_Req]: [core_id,course_id] [int,int]</p>
+        <p>[Track_Req: [track_id,course_id] [int,int]</p>
+        <p>[Majoring_in]: [stud_id,major_id] [int,int]</p>
+        <p>[Passed]: [stud_id,course_id] [int,int]</p>
+    </div>
+
+</body>
+
+  </body>
+  </html>
