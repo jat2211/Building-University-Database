@@ -7,4 +7,4 @@ Implemented an SQL schema that creates front-end web app with Flask and HTML tha
 - Python
 - Flask
 - HTML
-- **Broader domains: web applications, data processing and querying, front-end engineering, data engineering
+- **Broader domains: web applications, data processing and querying, front-end engineering, data engineering**
